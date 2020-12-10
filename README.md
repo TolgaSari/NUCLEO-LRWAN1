@@ -12,5 +12,16 @@ LoRa shield is designed to communicate using its pins **D0-D1**. Sadly, these pi
 
 ![The pinout of the board](https://raw.githubusercontent.com/TolgaSari/NUCLEO-LRWAN1/main/NUCLEO_Reference/nucleo_l053r8_2017_9_25_mor_right.png)
 
-To access the shield, we have to use different UART interface. Fortunately, pins **PA_10** and **PB_6** can be used as UART RX-TX pair. In addition the this, they are accessible from arduino as pins **D2** and **D10** respectively. To utilize them, **PA_10** must be connected to **shield's D0** and **PB_6** must be connected to **shield's D1** using female to male jumper cables. The resulting connections are shown in the figure below.
+To access the shield, we have to use different UART interface. Fortunately, pins **PA_10** and **PB_6** can be used as UART Rx-Tx pair. In addition the this, they are accessible from arduino as pins **D2** and **D10** respectively. To utilize them, **PA_10** must be connected to **shield's D0** and **PB_6** must be connected to **shield's D1** using female to male jumper cables. The resulting connections are shown in the figure below.
 
+![Jumper connections](https://raw.githubusercontent.com/TolgaSari/NUCLEO-LRWAN1/main/LRWAN_Reference/jumperConnections.jpeg)
+
+Next, default Rx/Tx pins must be overriden in all of the arduino codes. 
+
+    HardwareSerial SerialLora(D2, D10);
+
+By default the shield operates with 115200 Baudrate, so any serial ports must be configured as
+
+    Serial.begin(115200);
+    
+After this step Nucleo board should communicate with the shield thus, the examples must work without any problems.
