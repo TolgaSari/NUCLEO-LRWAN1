@@ -30,11 +30,28 @@ After this step Nucleo board should communicate with the shield thus, the exampl
 
 We will use https://community.thingpark.org/ to develop our applications. Thinkgpark Community is provided by Actility, and it consists of community available LoRaWAN Base Stations that can be used in personal LoRaWAN applications. To connect our kits to the network first, we need to open an account => https://community.thingpark.org/index.php/register/
 
-## Binding Device with an Application
+## Creating Test Application
+
+To create a dummy application https://webhook.site/ is used. 
+
+![webhookApp](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/webHookSite.png)
+
+Then from the https://community.thingpark.io/tpe/#/applications/create a new application is created.
+
+![appCreate](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/testApp.png)
+
+After this step, the application can be associated with the device.
+
+## Registering LoRa Enabled Device
 
 To bind our kits with a web application first we need to run getInfo example in examples folder. The output looks like this:
 
 ![Result of getInfo](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/getInfo_1.png)
 
 Here the important fields are DevEUI, ApplicationEUI and ApplicationKey(AppKey). These fields are required to associate the device with an application.
+
+From https://community.thingpark.io/tpe/#/devices/create?vendorId=generic the device will be registered using the dummy application and the results of getInfo example.
+
+![Create Dev](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/testDev.png)
+
 
