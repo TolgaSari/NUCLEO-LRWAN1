@@ -54,4 +54,36 @@ From https://community.thingpark.io/tpe/#/devices/create?vendorId=generic the de
 
 ![Create Dev](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/testDev.png)
 
+Notice that Over-The-Air-Activation(OTAA) mode is selected when registering the device.
+
+## Running the Application
+
+Right now, the Thingpark Community network knows where to route the packets that come from our device. Running LoRaWANOTAA will connect our device to the Thingpark Community network. 
+
+![joinOTAA](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/joinOTAA.png)
+
+After this step the device can be observed at devices tab.
+
+![dashboard](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/deviceDashboard.png)
+
+If the device connects successfully then we can send packets to the device using **Send Downlink** button.
+
+![sendDownlink](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/sendDownlink.png)
+
+We can only send hex data to specified ports of the device. The sent packet will be seen on the console when the device receives it.
+
+![loopback](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/joinOTAA_loopback.png)
+
+Using weebhook.site we can see POST requests of our device.
+
+![webhookResults](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/webHookResults.png)
+
+In application dashboard we can see our device's requests too.
+
+![applicationDashboard](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/applicationDashboard.png)
+
+
+ 
+
+
 
