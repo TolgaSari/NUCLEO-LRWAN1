@@ -25,3 +25,16 @@ By default the shield operates with 115200 Baudrate, so any serial ports must be
     Serial.begin(115200);
     
 After this step Nucleo board should communicate with the shield thus, the examples must work without any problems.
+
+# Connecting to LoRa Network
+
+We will use https://community.thingpark.org/ to develop our applications. Thinkgpark Community is provided by Actility, and it consists of community available LoRaWAN Base Stations that can be used in personal LoRaWAN applications. To connect our kits to the network first, we need to open an account => https://community.thingpark.org/index.php/register/
+
+## Binding Device with an Application
+
+To bind our kits with a web application first we need to run getInfo example in examples folder. The output looks like this:
+
+![Result of getInfo](https://github.com/TolgaSari/NUCLEO-LRWAN1/blob/main/LRWAN_Reference/getInfo_1.png)
+
+Here the important fields are DevEUI, ApplicationEUI and ApplicationKey(AppKey). These fields are required to associate the device with an application.
+
