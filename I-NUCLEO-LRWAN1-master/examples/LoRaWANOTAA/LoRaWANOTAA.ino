@@ -31,8 +31,8 @@
 HardwareSerial SerialLora(D2, D10);
 
 // AppKey and AppEUI.
-const char appKey[] = "0123456789abcdef0123456789abcdef";
-const char appEUI[] = "0101010101010101";
+const char appKey[] = "112233445566778899aabbccddeeff00";
+const char appEUI[] = "0000000000000000";
 
 // Data send
 char frameTx[] = "Hello world!";
